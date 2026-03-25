@@ -10,11 +10,8 @@ package proyecto2edd;
  */
 public class Proyecto2EDD {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Panel ventana = new Panel();
+        ventana.setVisible(true);
     }
-    
 }
