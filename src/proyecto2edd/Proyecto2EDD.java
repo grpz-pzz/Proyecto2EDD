@@ -6,7 +6,7 @@ package proyecto2edd;
 
 /**
  *
- * @author gianc
+ * @author Giancarlo Paolino & Sebastian Velasquez
  */
 public class Proyecto2EDD {
 

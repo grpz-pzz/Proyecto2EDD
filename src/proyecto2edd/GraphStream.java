@@ -5,32 +5,50 @@ import org.graphstream.graph.implementations.*;
 import org.graphstream.ui.view.Viewer;
 
 /**
- * @author gianc
+ * Esta clase se encarga de dibujar el Montículo Binario de forma visual.
+ * Convierte el arreglo de documentos en un árbol de nodos y conexiones.
+ * 
+ * @author Giancarlo Paolino & Sebastian Velasquez
  */
 public class GraphStream {
 
     private Graph grafo;
     private Viewer visor;
     
+    // Prefijo para identificar las líneas que conectan a los nodos
     private final String ARISTA_PREFIX = "edge_";
 
-    public GraphStream() 
-    {
+    /**
+     * Constructor: Configura el motor visual y crea el lienzo del grafo.
+     */
+    public GraphStream() {
+        // Indica a la librería que use Swing para mostrar la ventana
         System.setProperty("org.graphstream.ui", "swing");
         
         this.grafo = new SingleGraph("MonticuloBinario");
 
+        // Carga los colores y formas iniciales
         configurarEstilos();
     }
 
+    /**
+     * Crea y muestra la ventana donde se verá el árbol.
+     * @return El visor que controla la ventana del grafo.
+     */
     public Viewer mostrarVisor() {
         if (visor == null) {
             visor = grafo.display();
+            // Permite que los nodos se acomoden solos sin amontonarse
             visor.enableAutoLayout();
         }
         return visor;
     }
 
+    /**
+     * Este metodo redibuja todo el árbol cada vez que el montículo cambia.
+     * @param monticulo El arreglo de documentos que viene de la clase Heap.
+     * @param tamano Cuántos documentos hay actualmente en el arreglo.
+     */
     public void actualizararbol(Documento[] monticulo, int tamano) {
         grafo.clear();
         configurarEstilos();
@@ -73,13 +91,15 @@ public class GraphStream {
         }
     }
 
+    /**
+     * Define los colores, tamaños y letras de los nodos y líneas.
+     */
     private void configurarEstilos() {
         String styleSheet = 
-            // Cambiamos 'background-color' por 'canvas-color'
             "graph { padding: 40px; canvas-color: white; }" + 
             "node {" +
             "   size: 35px, 25px;" + 
-            "   fill-color: #87CEFA;" + 
+            "   fill-color: #87CEFA;" +
             "   stroke-mode: plain;" + 
             "   stroke-color: black;" +
             "   text-size: 13;" +
@@ -87,7 +107,7 @@ public class GraphStream {
             "   text-color: black;" +
             "}" +
             "node.raiz {" + 
-            "   fill-color: #FFC0CB;" + 
+            "   fill-color: #FFC0CB;" +
             "   size: 40px, 30px;" +
             "}" +
             "edge {" +
