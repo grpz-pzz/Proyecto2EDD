@@ -5,4 +5,4 @@ El proyecto consiste en un administrador de colas de impresion donde se prioriza
 
 ## Autores
 - Giancarlo Paolino 31.464.005
-- Sebastian Velasquez
+- Sebastian Velasquez 31.042.821
