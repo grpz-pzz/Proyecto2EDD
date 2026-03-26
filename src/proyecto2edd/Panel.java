@@ -33,6 +33,11 @@ public class Panel extends javax.swing.JFrame {
     {
         grafo.actualizararbol(manager.cola.monticulo, 100);
     }
+    
+    public void WriteConsole(String message)
+    {
+        jTextArea1.append(message + "\n");
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -183,21 +188,21 @@ public class Panel extends javax.swing.JFrame {
                             String nombre = datos[0].trim();
                             String prioridad = datos[1].trim();
                             
-                            jTextArea1.append("Usuario: "  + nombre+ " Prioridad: " + prioridad + "\n");
+                            WriteConsole("Usuario: "  + nombre+ " Prioridad: " + prioridad);
                             
                             User nuevo = new User(nombre, prioridad);
                             tablausuarios.insert(nuevo);
                         }
                     }
                 }catch (Exception e) {
-                System.out.println("No se puedo leer el archivo " + e.getMessage());
+                WriteConsole("No se puedo leer el archivo " + e.getMessage());
             }
             
             grafo.mostrarVisor();
 
-            System.out.println("archivo cargado: " + archivo.getName() + "\n");
+            WriteConsole("archivo cargado: " + archivo.getName() + "\n");
         } else {
-            System.out.println("carga de archivo cancelada.\n");
+            WriteConsole("carga de archivo cancelada.\n");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -220,7 +225,7 @@ public class Panel extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-    // TODO add you                String usuario = txtusuario.getText();
+
         String usuario = jTextField1.getText();
         String documento = jTextField2.getText();
 
@@ -232,32 +237,34 @@ public class Panel extends javax.swing.JFrame {
         manager.cancelar(usuario, documento);
         jTextField1.setText("");
         jTextField2.setText("");
-        
+        UpdateGraph();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         Documento documento = manager.imprimirsiguiente();
         if (documento != null) {
             grafo.actualizararbol(manager.cola.monticulo, 100);
+            UpdateGraph();
          } else {
-              System.out.println("cola vacia");
+              WriteConsole("La cola vacia");
          }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         String usuario = jTextField1.getText();
         if (usuario.isEmpty()) {
-            System.out.println("necesitas ingresar el usuario para eliminar");
+            WriteConsole("Necesitas ingresar el usuario para eliminar");
             return;
         }
         User u = tablausuarios.buscar(usuario);
         if (u != null) {
             tablausuarios.eliminar(usuario);
-            System.out.println("Usuario eliminado");
+            WriteConsole("Usuario eliminado");
             jTextField1.setText("");
         } else {
-            System.out.println("usuario no existe");
+            WriteConsole("usuario no existe");
         }
+        UpdateGraph();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -267,12 +274,12 @@ public class Panel extends javax.swing.JFrame {
         }
         User u = tablausuarios.buscar(usuario);
         if (u != null) {
-            System.out.println("estado del usuario: " + usuario + "");  
-            System.out.println(u.priority);       
-            System.out.println("documentos: " + u.list.toString());
+            WriteConsole("estado del usuario: " + usuario + "");  
+            WriteConsole(u.priority);       
+            WriteConsole("documentos: " + u.list.toString());
             
         } else {
-            System.out.println("El usuario no existe");
+            WriteConsole("El usuario no existe");
         }
     }//GEN-LAST:event_jButton8ActionPerformed
 
