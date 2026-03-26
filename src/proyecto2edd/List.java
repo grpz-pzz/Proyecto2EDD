@@ -5,7 +5,7 @@ package proyecto2edd;
  * Cada usuario tiene una lista como esta para organizar sus archivos
  * antes de mandarlos a la cola de impresión.
  * 
- * @author Giancarlo Paolino & Sebastian Velasquez
+ * @author GiancarloSebastian;
  */
 public class List {
     

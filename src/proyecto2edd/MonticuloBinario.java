@@ -5,7 +5,7 @@ package proyecto2edd;
  * Su función es que el documento con el menor número de time
  * siempre esté en la parte superior para ser impreso primero.
  * 
- * @author Giancarlo Paolino & Sebastian Velasquez
+ * @author GiancarloSebastian;
  */
 public class MonticuloBinario {
     

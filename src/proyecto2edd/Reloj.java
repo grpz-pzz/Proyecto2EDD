@@ -5,7 +5,7 @@ package proyecto2edd;
  * Su función principal es asignar un valor numérico a cada documento
  * por el momento en que llega y la prioridad del usuario.
  * 
- * @author Giancarlo Paolino & Sebastian Velasquez
+ * @author GiancarloSebastian;
  */
 public class Reloj {
 

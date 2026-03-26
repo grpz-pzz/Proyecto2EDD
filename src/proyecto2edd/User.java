@@ -5,7 +5,7 @@ package proyecto2edd;
  * Cada usuario tiene un nombre único, un rango de prioridad y su propia
  * lista personal de documentos.
  * 
- * @author Giancarlo Paolino & Sebastian Velasquez
+ * @author GiancarloSebastian;
  */
 public class User {
 

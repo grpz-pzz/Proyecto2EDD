@@ -5,7 +5,7 @@ package proyecto2edd;
  * Esta clase almacena los datos, el estado de prioridad y la 
  * información del usuario para cada archivo en la cola.
  * 
- * @author Giancarlo Paolino & Sebastian Velasquez
+ * @author GiancarloSebastian;
  */
 public class Documento {
     

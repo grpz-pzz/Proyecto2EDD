@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author Giancarlo Paolino & Sebastian Velasquez
+ * @author GiancarloSebastian;
  */
 public class Panel extends javax.swing.JFrame {
     

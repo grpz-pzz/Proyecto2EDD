@@ -5,7 +5,7 @@ package proyecto2edd;
  * Coordina la búsqueda de usuarios, el envío de documentos a la cola 
  * de impresión y el manejo del tiempo mediante el reloj.
  * 
- * @author Giancarlo Paolino & Sebastian Velasquez
+ * @author GiancarloSebastian;
  */
 public class Manager {
     

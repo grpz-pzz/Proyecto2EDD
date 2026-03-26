@@ -8,7 +8,7 @@ import org.graphstream.ui.view.Viewer;
  * Esta clase se encarga de dibujar el Montículo Binario de forma visual.
  * Convierte el arreglo de documentos en un árbol de nodos y conexiones.
  * 
- * @author Giancarlo Paolino & Sebastian Velasquez
+ * @author GiancarloSebastian;
  */
 public class GraphStream {
 

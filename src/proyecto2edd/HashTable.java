@@ -3,7 +3,7 @@ package proyecto2edd;
 /**
  * Usa un nombre para calcular un número de cajón (índice) y guarda ahí al usuario.
  * 
- * @author Giancarlo Paolino & Sebastian Velasquez
+ * @author GiancarloSebastian;
  */
 public class HashTable {
 

@@ -5,7 +5,7 @@ package proyecto2edd;
  * Guarda un objeto de tipo Documento y permite conectarlo con otro 
  * nodo para que la Tabla Hash pueda manejar varios datos en una misma posición.
  * 
- * @author Giancarlo Paolino & Sebastian Velasquez
+ * @author GiancarloSebastian;
  */
 public class DocumentNode {
 

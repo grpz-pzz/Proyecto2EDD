@@ -3,7 +3,7 @@ package proyecto2edd;
 /**
  * Esta clase representa el nodo de la Tabla Hash de usuarios.
  * 
- * @author Giancarlo Paolino & Sebastian Velasquez
+ * @author GiancarloSebastian;
  */
 public class HashNode {
 
